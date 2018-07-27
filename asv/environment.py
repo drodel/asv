@@ -655,4 +655,4 @@ class ExistingEnvironment(Environment):
     def run(self, args, **kwargs):
         log.debug("Running '{0}' in {1}".format(' '.join(args), self.name))
         return util.check_output([
-            self._executable] + args, **kwargs)
+            self._executable] + args, capture_output=False, **kwargs)
